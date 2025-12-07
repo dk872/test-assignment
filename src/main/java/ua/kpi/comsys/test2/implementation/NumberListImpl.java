@@ -178,7 +178,6 @@ public class NumberListImpl implements NumberList {
         }
     }
 
-
     /**
      * Constructs new <tt>NumberListImpl</tt> by converting a **decimal** number
      * provided in string notation to the list's base (Binary, Base 2).
@@ -206,7 +205,6 @@ public class NumberListImpl implements NumberList {
         }
     }
 
-
     /**
      * Saves the number, stored in the list, into the specified file
      * in **decimal** scale of notation.
@@ -222,7 +220,6 @@ public class NumberListImpl implements NumberList {
         }
     }
 
-
     /**
      * Returns the student's record book number.
      *
@@ -231,7 +228,6 @@ public class NumberListImpl implements NumberList {
     public static int getRecordBookNumber() {
         return RECORD_BOOK_NUMBER;
     }
-
 
     /**
      * Returns a new <tt>NumberListImpl</tt> which represents the same number
@@ -245,7 +241,6 @@ public class NumberListImpl implements NumberList {
         // Convert from Binary (BASE=2) to Ternary (CHANGE_SCALE_BASE=3)
         return fromDecimalBigInteger(decimalValue, CHANGE_SCALE_BASE);
     }
-
 
     /**
      * Returns a new <tt>NumberListImpl</tt> which represents the result of
@@ -278,7 +273,6 @@ public class NumberListImpl implements NumberList {
         return fromDecimalBigInteger(resultValue, this.currentBase);
     }
 
-
     /**
      * Returns the string representation of the number stored in the list
      * in **decimal** scale of notation.
@@ -288,7 +282,6 @@ public class NumberListImpl implements NumberList {
     public String toDecimalString() {
         return toDecimalBigInteger().toString();
     }
-
 
     /**
      * Returns the string representation of the number stored in the list
@@ -309,7 +302,6 @@ public class NumberListImpl implements NumberList {
         }
         return sb.toString();
     }
-
 
     /**
      * Compares this NumberListImpl object with the specified object for equality.
@@ -350,7 +342,6 @@ public class NumberListImpl implements NumberList {
         return size;
     }
 
-
     /**
      * Returns true if this list contains no elements.
      *
@@ -360,7 +351,6 @@ public class NumberListImpl implements NumberList {
     public boolean isEmpty() {
         return size == 0;
     }
-
 
     /**
      * Returns true if this list contains the specified element (digit).
@@ -380,7 +370,6 @@ public class NumberListImpl implements NumberList {
         }
         return false;
     }
-
 
     /**
      * Returns an iterator over the elements in this list in proper sequence.
@@ -548,7 +537,6 @@ public class NumberListImpl implements NumberList {
         unlink(x);
     }
 
-
     /**
      * Returns an array containing all of the elements in this list in proper sequence.
      *
@@ -563,7 +551,6 @@ public class NumberListImpl implements NumberList {
         return result;
     }
 
-
     /**
      * This method is explicitly NOT required by the assignment and returns null.
      *
@@ -575,7 +562,6 @@ public class NumberListImpl implements NumberList {
         // This method is explicitly NOT required by the assignment
         return null;
     }
-
 
     /**
      * Appends the specified element (digit) to the end of this list.
@@ -597,7 +583,6 @@ public class NumberListImpl implements NumberList {
         return true;
     }
 
-
     /**
      * Removes the first occurrence of the specified element (digit) from this list, if it is present.
      *
@@ -618,7 +603,6 @@ public class NumberListImpl implements NumberList {
         return false;
     }
 
-
     /**
      * Returns true if this list contains all of the elements of the specified collection.
      *
@@ -634,7 +618,6 @@ public class NumberListImpl implements NumberList {
         return true;
     }
 
-
     /**
      * Appends all of the elements in the specified collection to the end of this list,
      * in the order that they are returned by the specified collection's iterator.
@@ -646,7 +629,6 @@ public class NumberListImpl implements NumberList {
     public boolean addAll(Collection<? extends Byte> c) {
         return addAll(size, c);
     }
-
 
     /**
      * Inserts all of the elements in the specified collection into this list,
@@ -703,7 +685,6 @@ public class NumberListImpl implements NumberList {
         return true;
     }
 
-
     /**
      * Removes from this list all of its elements that are also contained in the specified collection.
      *
@@ -727,7 +708,6 @@ public class NumberListImpl implements NumberList {
         return modified;
     }
 
-
     /**
      * Retains only the elements in this list that are contained in the specified collection.
      *
@@ -749,7 +729,6 @@ public class NumberListImpl implements NumberList {
         return modified;
     }
 
-
     /**
      * Removes all of the elements from this list. The list will be empty after this call returns.
      */
@@ -768,7 +747,6 @@ public class NumberListImpl implements NumberList {
         size = 0;
     }
 
-
     /**
      * Returns the element (digit) at the specified position in this list.
      *
@@ -780,7 +758,6 @@ public class NumberListImpl implements NumberList {
     public Byte get(int index) {
         return node(index).data;
     }
-
 
     /**
      * Replaces the element at the specified position in this list with the specified element.
@@ -804,7 +781,6 @@ public class NumberListImpl implements NumberList {
         x.data = element;
         return oldVal;
     }
-
 
     /**
      * Inserts the specified element at the specified position in this list.
@@ -833,7 +809,6 @@ public class NumberListImpl implements NumberList {
         }
     }
 
-
     /**
      * Removes the element at the specified position in this list.
      * Shifts any subsequent elements to the left.
@@ -848,7 +823,6 @@ public class NumberListImpl implements NumberList {
             throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + size);
         return unlink(node(index));
     }
-
 
     /**
      * Returns the index of the first occurrence of the specified element in this list,
@@ -872,7 +846,6 @@ public class NumberListImpl implements NumberList {
         return -1;
     }
 
-
     /**
      * Returns the index of the last occurrence of the specified element in this list,
      * or -1 if this list does not contain the element.
@@ -895,7 +868,6 @@ public class NumberListImpl implements NumberList {
         return -1;
     }
 
-
     /**
      * Returns a list iterator over the elements in this list (in proper sequence).
      *
@@ -905,7 +877,6 @@ public class NumberListImpl implements NumberList {
     public ListIterator<Byte> listIterator() {
         return new ListItr(0);
     }
-
 
     /**
      * Returns a list iterator over the elements in this list (in proper sequence),
@@ -1010,7 +981,6 @@ public class NumberListImpl implements NumberList {
         }
     }
 
-
     /**
      * Returns a view of the portion of this list between the specified fromIndex, inclusive, and toIndex, exclusive.
      * Returns a new NumberListImpl containing the elements of the sublist.
@@ -1034,7 +1004,6 @@ public class NumberListImpl implements NumberList {
         }
         return newList;
     }
-
 
     /**
      * Exchanges two list elements, specified by indexes, by swapping their data.
@@ -1061,7 +1030,6 @@ public class NumberListImpl implements NumberList {
 
         return true;
     }
-
 
     /**
      * Sorts elements (digits) of the list in ascending order (Bubble Sort used for simplicity).
@@ -1092,7 +1060,6 @@ public class NumberListImpl implements NumberList {
         } while (swapped);
     }
 
-
     /**
      * Sorts elements (digits) of the list in descending order (Bubble Sort used for simplicity).
      */
@@ -1122,7 +1089,6 @@ public class NumberListImpl implements NumberList {
         } while (swapped);
     }
 
-
     /**
      * Performs a left cyclic shift on the elements (digits) in the current list.
      * The first element moves to the last position.
@@ -1143,7 +1109,6 @@ public class NumberListImpl implements NumberList {
         // The last node gets the original first element's data
         current.data = first;
     }
-
 
     /**
      * Performs a right cyclic shift on the elements (digits) in the current list.
